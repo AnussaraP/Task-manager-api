@@ -14,7 +14,7 @@ app.use(taskRouter)
 
 
 app.listen(port, () => {
-    console.log( 'Server is up on port ' + port)
+    console.log( 'Server is up on ports ' + port)
     if(!port)
     throw new Error('there is no port')
 })
