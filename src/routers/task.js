@@ -30,15 +30,12 @@ router.get('/tasks', auth, async (req,res)=>{
     //
 
     if(req.query.completed){
-        match.completed = req.query.completed === 'true'     //set uo completed to String, convert boolean to string 
-        //if completed String 'True' = to String 'True' === the completed will be true 
-        //if String not equal to 'True', this will be false 
-        // URL: {{url}}/tasks/?completed=true    ===bcoz true is string, so this needs to convert boolean to string like above 
+        match.completed = req.query.completed === 'true'    
     }
 
     if(req.query.sortBy){
         const parts = req.query.sortBy.split(':');
-        sort[parts[0]] = parts[1] === 'desc' ? -1 : 1  //this is terbary operator: has 3 pieces in one 
+        sort[parts[0]] = parts[1] === 'desc' ? -1 : 1  
 
     }
 
